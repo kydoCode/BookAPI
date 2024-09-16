@@ -1,4 +1,4 @@
-const { Auhor } = require ('../models');
+const { Author } = require ('../models');
 
 exports.createAuthor = async(req, res, next) => {
     try {
@@ -9,7 +9,7 @@ exports.createAuthor = async(req, res, next) => {
     }
 }
 
-exports.getAllAuthor = async (req, res, next) => {
+exports.getAllAuthors = async (req, res, next) => {
     try {
         const authors = await Author.findAll();
         res.status(200).json(authors);

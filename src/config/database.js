@@ -5,7 +5,7 @@ require('dotenv').config();
 // ON initialise sequelzie sur notre db
 
 const sequelize = new Sequelize(
-) // class on importe
+ // class on importe
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASS,
@@ -13,5 +13,6 @@ const sequelize = new Sequelize(
         host: process.env.DB_HOST,
         dialect: 'mysql'
     }
+)
 // On exporte
 module.exports = sequelize;
